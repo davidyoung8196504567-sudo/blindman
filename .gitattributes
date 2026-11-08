@@ -1,0 +1,5 @@
+# Preserve 1995 files byte-for-byte (CHECKSUMS.sha256 must stay valid on every OS)
+*.DOC binary
+*.MAT binary
+*.EXE binary
+thesis-1995/code/** -text
