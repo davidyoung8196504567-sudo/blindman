@@ -120,5 +120,7 @@ Annexes B–G print the program source as submitted in May 1995. Two further ver
   and toolboxes, Cognos Scenario, GoldWave 2.11, Stdemo Player 1.5, WazWav 0.1 and FORM1968.
   It is proprietary or shareware and runs only on that era of hardware. `LOADWAV.M`
   (© C.W. Therrien, 1994) is also excluded.
-- **The raw `.WAV` recordings.** They were archived in 1995 on custom-formatted floppy disks and
-  are being looked for. The derived formant features *are* included, in [`data/`](data/).
+- **The raw `.WAV` recordings.** They did not survive. The author's 1995 floppy disks hold only
+  the period software listed above, which is excluded. The formant features derived from the
+  recordings *are* included, in [`data/`](data/), and are sufficient to reproduce the thesis's
+  classification results.

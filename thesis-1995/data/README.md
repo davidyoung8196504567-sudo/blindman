@@ -16,8 +16,9 @@ The data are described in Chapter 5 (§5.2–5.6) and Tables 5.1–5.2.
 | [`telephone/`](telephone/) | Same recordings played over a local telephone call, picked up at the far end | 8000 Hz, 16-bit | 1,237 |
 
 The raw `.WAV` recordings are not included. In 1995 they were compressed (WazWav 4:1),
-archived with ARJ, and stored on custom 1.92 MB-formatted floppy disks. Recovering them is a
-separate effort.
+archived with ARJ, and stored on custom 1.92 MB-formatted floppy disks; those archives did not
+survive. These formant tracks are the input to the recognizer (`FARTMAPT.M`), so the thesis's
+classification results can be reproduced from them.
 
 ## File format
 
