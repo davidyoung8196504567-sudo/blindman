@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * *"  # nightly re-score
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      # The score gate: tests/test_reproduction.py fails if any reproduced
+      # Chapter 6 result leaves its tolerance.
+      - run: python -m pytest -q
+      - name: Chapter 6 reproduction
+        run: |
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python -m blindman.repro1995 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

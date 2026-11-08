@@ -27,6 +27,11 @@ thesis's classification results can therefore be reproduced without the audio.
 
 ## Phase 0: Reproduce the 1995 results
 
+> **Done, 2026-11-08.** Every Fuzzy ARTMAP recognition rate reproduces exactly where
+> the data survived complete, and four of those six tables match cell for cell. The
+> TFRV backprop benchmark has now been run. Results and every
+> discrepancy: [PHASE0.md](PHASE0.md).
+
 **Goal.** Port the recognizer and confirm that the recovered data reproduces Chapter 6. This is
 the baseline for everything after it, and it proves that Stage 1's recovery is complete.
 
@@ -50,8 +55,8 @@ the baseline for everything after it, and it proves that Stage 1's recovery is c
 | Fuzzy ARTMAP, TFRV, speaker-dependent (Tables 6.5-M, 6.5-T) | 98.2% | 91.5% |
 | Fuzzy ARTMAP, TFRV, speaker-independent (6.6-M, 6.6-T) | 94.1% | 87.0% |
 | Fuzzy ARTMAP, BFRV, speaker-dependent (6.3-M, 6.3-T) | 97.1% | 88.0% |
-| Fuzzy ARTMAP, BFRV, speaker-independent (6.4-M, 6.4-T) | 94.1% | 85.2% |
-| Backprop, BFRV, speaker-dependent / independent (6.1, 6.2) | 91.7% / 88.7% | — |
+| Fuzzy ARTMAP, BFRV, speaker-independent (6.4-M, 6.4-T) | 94.1% (printed; the table sums to 93.9%) | 85.2% |
+| Backprop, BFRV, speaker-dependent / independent (6.1, 6.2) | 91.7% / 88.7% (printed; 391/440 is 88.9%) | — |
 
 Any test that does not reproduce gets an explanation, not a tuned parameter.
 

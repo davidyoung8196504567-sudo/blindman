@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blindman"
+version = "0.1.0"
+description = "BLINDMAN: an agent that navigates by sound. Stage 2, Phase 0: the 1995 Fuzzy ARTMAP recognizer ported to Python."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [{ name = "D.P. Young" }]
+dependencies = [
+    "numpy==2.3.5",
+    "scipy==1.16.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"blindman.repro1995" = ["chapter6_targets.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: runs the full Chapter 6 reproduction (about a minute)"]

@@ -41,9 +41,14 @@ recovered thesis, the original MATLAB code and the speech feature database are a
 - **Stage 1: recover the 1995 research.** The thesis is recovered from its original Word 6.0
   files. Diagrams damaged in conversion have been corrected from scans of the printed copy. The raw
   `.WAV` recordings did not survive; the formant features derived from them did.
-- **Stage 2: build on it.** In planning: see [`docs/STAGE2.md`](docs/STAGE2.md). It starts by
+- **Stage 2: build on it.** Plan: [`docs/STAGE2.md`](docs/STAGE2.md). It starts by
   reproducing the 1995 results from the recovered features, then adds new audio, modern
   comparisons, language identification and, exploratorily, animal vocalization.
+  - **Phase 0 is done:** the 1995 recognizer is ported to Python. Every Fuzzy ARTMAP
+    recognition rate reproduces exactly where the data survived complete, and four of
+    those six tables match cell for cell. See
+    [`docs/PHASE0.md`](docs/PHASE0.md); a research log is kept in
+    [`JOURNAL.md`](JOURNAL.md).
 
 ## License
 
