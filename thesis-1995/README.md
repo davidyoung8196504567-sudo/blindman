@@ -18,7 +18,7 @@ readable today.
 
 | Format | Where | Notes |
 |---|---|---|
-| **PDF (whole thesis)** | [`Young-1995-FuzzyARTMAP-ASR-Thesis.pdf`](Young-1995-FuzzyARTMAP-ASR-Thesis.pdf) | 179 pages, bookmarked by chapter. Best for reading. |
+| **PDF (whole thesis)** | [`Young-1995-FuzzyARTMAP-ASR-Thesis.pdf`](Young-1995-FuzzyARTMAP-ASR-Thesis.pdf) | 178 pages, bookmarked by chapter. Best for reading. |
 | PDF per chapter | [`pdf/`](pdf/) | |
 | Markdown (readable on GitHub) | [`markdown/`](markdown/) | Text, tables, equations and figures; annex code listings as code blocks. |
 | Word (.docx) | [`docx/`](docx/) | Editable modern Word format. |

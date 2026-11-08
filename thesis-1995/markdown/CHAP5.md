@@ -104,7 +104,7 @@ Figure 5.2 summarizes the communication paths between the various hardware compo
 
 ![Figure 5.2](figures/CHAP5/fig5-2.png)
 
-*Figure 5.2 (vector drawing recovered from rendered page)*
+*Scanned from the printed thesis.*
 
 Figures 5.3-M and 5.3-T illustrate the time/amplitude representation of the phrase “***May we all learn a yellow lion roar*** ” batch recorded and stored in MDY12204.WAV, then replayed over a local telephone connection and on-line recorded to file TDY12204.WAV.
 
