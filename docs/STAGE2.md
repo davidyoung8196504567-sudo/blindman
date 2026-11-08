@@ -32,8 +32,8 @@ the baseline for everything after it, and it proves that Stage 1's recovery is c
 
 **Work.**
 - Port `FARTMAPT.M` (Fuzzy ARTMAP, with the TFRV and BFRV representations) and the backprop
-  benchmark (`BPMAPPER.M`, `BPTESTER.M`) to Python and numpy. The 2015 refactor, run under GNU
-  Octave, serves as a cross-check.
+  benchmark (`BPMAPPER.M`, `BPTESTER.M`) to **Python** and numpy (decided). The 2015 refactor,
+  run under GNU Octave, serves as a cross-check.
 - Rebuild the Chapter 6 protocol (§6.2):
   - **Speaker-dependent:** the first half of each speaker's samples train and the second half
     test, in recording order.
@@ -144,6 +144,10 @@ VoxLingua107 (107 languages, CC BY 4.0). It is the **baseline here, not the cont
 - One Fuzzy ARTMAP module per language, loaded on demand, using ARTMAP's incremental learning to
   add a language or vocabulary without retraining the others.
 
+The modern counterpart of 1995's "modular packaging" is a **small adapter per language** (LoRA)
+on a shared pretrained speech encoder, swapped in when the language is identified. Running
+both versions is a direct test of the 1995 design against today's.
+
 **Check.** End-to-end accuracy against a single multilingual recognizer. Then add a new language
 and measure how much the accuracy on the existing languages changes; with ARTMAP it should not
 fall.
@@ -184,6 +188,60 @@ the claim to what the result shows.
 
 ---
 
+## Training techniques: the 1995 claims against today's methods
+
+Each phase pairs the 1995 method with a current one, so the comparison is the result:
+
+| 1995 claim | Today's counterpart | Test |
+|---|---|---|
+| Formant ratios are speaker-independent | Self-supervised speech encoders (wav2vec 2.0, HuBERT, WavLM) | Phase 2: accuracy across speakers, accents and channels |
+| Fuzzy ARTMAP learns new data without forgetting the old | Fine-tuning, which is prone to catastrophic forgetting; replay and adapters as mitigations | Add phrases, speakers and languages one at a time; measure accuracy on earlier ones |
+| Fast training, no random initial weights | Parameter-efficient fine-tuning (LoRA) of a pretrained model | Training time and accuracy, reported side by side |
+| Modular vocabulary packaging | One adapter per language on a shared encoder | Phase 3 |
+| Speech recorded over a real telephone line | Augmentation: telephone codec simulation, noise and room acoustics, SpecAugment | Phase 1 synthetic-to-real and channel tests |
+
+The 1995 testing controls (§6.2.1) already match modern evaluation practice: no overlap between
+training and test phrases, chronological splits, nothing discarded to improve results. They stay
+in force, plus whole-speaker hold-outs and fixed random seeds.
+
+## Practices shared with bug-bash
+
+[bug-bash](https://github.com/davidyoung8196504567-sudo/bug-bash), the author's other public
+project, measures and trains how well language models find bugs. These of its practices carry
+over:
+
+- **A research journal.** `JOURNAL.md`, one entry per session, using the same template,
+  including the *Caught in review* line. That line records AI-written code or tests that were
+  rejected or corrected, and why.
+- **A plan with a *done when* column.** Each phase above becomes a row with a concrete exit test.
+- **Automatic, judge-free scoring.** Every result is a number computed from held-out data. Any
+  attempt to game a metric (for example, leakage between training and test speakers) is logged,
+  as bug-bash logs reward hacking.
+- **CI with a score gate.**
+  - GitHub Actions runs the tests on a Python and OS matrix.
+  - Phase 0's reproduction of Chapter 6 becomes a **required check**: a pull request that moves
+    any reproduced result outside its tolerance fails, and the change in score is posted on the
+    pull request.
+  - A nightly run re-scores everything.
+- **Reproducibility.** A pinned environment and a Docker image for the experiments.
+- **Data and model cards.** Licence, consent and coverage for every dataset; training data and
+  known limits for every model.
+- **A metrics history.** Every scored run is appended, and the trends are published on a small
+  GitHub Pages dashboard.
+- **An agent harness over MCP.** BLINDMAN's listening abilities are exposed as tools (for
+  example `listen`, `identify_language`, `recognize`, `press`), so an agent such as Claude Code
+  can be tested navigating by sound alone.
+- **A division of work and an *Author and tools* statement.** These say which decisions are the
+  author's and what was built with AI assistance.
+
+### A shared environment: an audio-only caller
+
+bug-bash's IVR simulator (`ivrsim`) is entirely fictional, and its design lists speech in and out
+as an optional later release. With spoken prompts it becomes a natural test bed for BLINDMAN: an
+agent that must navigate a phone menu using only what it hears. The integration would use
+`ivrsim` as a dependency, not copy it, and keeps to the decision that IVR client work stays out of
+this repository. It is an option for after Phase 3, to be decided.
+
 ## How this serves BLINDMAN
 
 The [AUI](AUI.md) uses dimensions of sound to carry meaning to a listener. BLINDMAN must do the
@@ -195,7 +253,10 @@ reverse: hear those dimensions and recover the meaning. Each phase builds part o
 
 ## Open decisions
 
-- **Language for the port:** Python and numpy, with Octave as a cross-check (proposed), or MATLAB.
+- ~~Language for the port~~: **Python** (decided 2026-11-08).
+- **Timing:** bug-bash's schedule runs to late December, so Phase 0 could run alongside it or
+  start afterwards.
+- **The shared `ivrsim` environment:** whether to adopt it after Phase 3.
 - **Synthetic speech:** seek written permission from ElevenLabs, or use an open-weight TTS model
   whose licence allows training.
 - **Data budget:** whether to license TIMIT through the LDC, and whether to run a new
