@@ -49,6 +49,9 @@ recovered thesis, the original MATLAB code and the speech feature database are a
     those six tables match cell for cell. See
     [`docs/PHASE0.md`](docs/PHASE0.md); a research log is kept in
     [`JOURNAL.md`](JOURNAL.md).
+  - **Where the world is now:** a survey of 2026 speech recognition models, free speech
+    databases and open problems, to rebaseline before building:
+    [`docs/STATE_OF_THE_ART.md`](docs/STATE_OF_THE_ART.md).
 
 ## License
 

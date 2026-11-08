@@ -23,6 +23,10 @@ The formant tracks are exactly the input to the recognizer (`FARTMAPT.M`), which
 formant ratios, normalizes them, warps them to a standard length and classifies them. The
 thesis's classification results can therefore be reproduced without the audio.
 
+Where the world stands now (models, free databases, and the open problems) is surveyed in
+[STATE_OF_THE_ART.md](STATE_OF_THE_ART.md). Each phase below builds only where that survey
+finds a gap, and uses existing models and data everywhere else.
+
 ---
 
 ## Phase 0: Reproduce the 1995 results
