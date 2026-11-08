@@ -37,8 +37,8 @@ recovered thesis, the original MATLAB code and the speech feature database are a
 ## Status
 
 - **Stage 1: recover the 1995 research.** The thesis is recovered from its original Word 6.0
-  files. Five vector diagrams await correction from the printed copy, and the search for the
-  archived raw `.WAV` recordings is ongoing.
+  files. Diagrams damaged in conversion have been corrected from scans of the printed copy (one,
+  Fig 3.3, is still to come). The search for the archived raw `.WAV` recordings is ongoing.
 - **Stage 2: build on it.** Planned. Today's CPUs and storage allow far more of each recording's
   detail to be kept than the 1995 processing budget allowed.
 

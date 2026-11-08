@@ -42,10 +42,6 @@ The RMC Speech Database is composed of voice samples from 14 volunteers from wit
 
 The speech samples consist of ten phrases recorded on a weekly basis over the four month collection period. These phrases are listed in table 5.2 in the order in which they were recorded within each session. They are numbered zero through nine to match the file naming convention (see figure 5.1) used to store the samples on computer. The first two phrases were included to aid in the registration of speech samples while the last eight phrases were chosen to represent a phonetically diverse range of speech sounds. The third and fourth phrases were taken from the TIMIT speech database, which has been used widely throughout the ASR literature. The remaining six phrases were taken from a published speaker recognition system where they were used to **“... *model the overall distribution of speech sounds that are likely to occur.*”** \[Sam76\]:
 
-![Figure 5.1](figures/CHAP5/fig5-1.png)
-
-*Figure 5.1 (vector drawing recovered from rendered page; the conversion damaged its layout, see the PDF or the printed original)*
-
 |  |  |
 |:--:|:--:|
 | ***Phrase Identifier*** | ***Spoken Phrase*** |
@@ -90,7 +86,11 @@ To test an ASR system realistically, it is necessary to record speech samples at
 
 All speech samples were digitized using the computer sound card and then compressed for bulk storage. The analog signals were digitized using a sampling rate of 22050 Hz with 16 bit amplitude resolution and stored in a monaural **PCM (Pulse Code Modulation)** *Windows* “WAV” file format. A filename convention was developed so that the speech sample files could be easily identified. The *MS DOS* operating system restricts the length of filenames to 8 letters, which lead to the adoption of the file naming convention shown in figure 5.1 :
 
+![Figure 5.1](figures/CHAP5/fig5-1.png)
+
 **Figure 5.1 RMC Speech Database File Naming Convention**
+
+*Figure 5.1 scanned from the printed thesis.*
 
 The “WAV” files were subsequently compressed using the *WazWav 0.1* compression program, which achieves a lossy 4:1 compression ratio. Several before and after trials with this program revealed that the frequency loss of a **ComPanded** (compressed then expanded) speech sample occurred above the maximum frequency to be used in the feature extraction process. Thus the loss was an acceptable trade off for the 75% reduction in storage space. The compressed “WAV” files are given a “WAZ” extension on the sample file name.
 
@@ -107,8 +107,6 @@ Figure 5.2 summarizes the communication paths between the various hardware compo
 *Figure 5.2 (vector drawing recovered from rendered page)*
 
 Figures 5.3-M and 5.3-T illustrate the time/amplitude representation of the phrase “***May we all learn a yellow lion roar*** ” batch recorded and stored in MDY12204.WAV, then replayed over a local telephone connection and on-line recorded to file TDY12204.WAV.
-
-Speaker’s Initials
 
 ![image2](figures/CHAP5/image2.png)
 
@@ -312,7 +310,7 @@ The feature classifier is implemented in the program FARTMAPT.M. It is based on 
 
 ![Figure 5.21](figures/CHAP5/fig5-21.png)
 
-*Figure 5.21 (vector drawing recovered from rendered page; the conversion damaged its layout, see the PDF or the printed original)*
+*Scanned from the printed thesis.*
 
 In figure 5.21, the vector ***a*** represents the speech feature vector being classified by the Fuzzy ART module while vector ***b*** represents the correct classification label of vector a . When vector ***a*** causes an output node to become committed, the corresponding row of the mapping matrix is initialized with the value of vector ***b***, thus effectively labeling the output node of the Fuzzy ART module.
 

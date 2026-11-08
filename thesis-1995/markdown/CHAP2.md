@@ -10,7 +10,7 @@ The human brain consists of highly interconnected network of billions of simple 
 
 ![Figure 2.1](figures/CHAP2/fig2-1.png)
 
-*Figure 2.1 (vector drawing recovered from rendered page; the conversion damaged its layout, see the PDF or the printed original)*
+*Scanned from the printed thesis.*
 
 In contrast, conventional computers are controlled by a single complex processor called a **CPU (central processing unit)** operating in a segmented manner**.** The CPU processes information as relatively fast electrical pulses transmitted between other system components by way of a single fixed data channel called a data bus. Although the CPU can process information at a very high rate, it must retrieve and store this information in a sequentially. The heart of the CPU’s power lies in its ability to compare two numbers very rapidly; however, it must handle all of its data one element at a time. This makes it very inefficient for handling large amounts of data simultaneously (as required for pattern recognition) but very efficient at performing sequential calculations.
 
@@ -26,10 +26,6 @@ A major difference between computers and ANNs is the programming paradigm used. 
 
 The operation of an artificial neuron can be visualized as a four stage process illustrated in figure 2.2. **Stage one** involves the collection of input elements to the neuron. The number of elements that comprise the total input and the source of each element is determined by the design layout of the connections within the network. Typically, the sources of inputs are the neural outputs of the preceding layer in the network, although the output from any neuron (including itself) in any layer may be used as an input source. **Stage two** involves adjusting the amplitude of each input element using a weighting function. This mimics the effect of the synaptic bond strength, which attenuates or amplifies signals transmitted between brain neurons. Typically the output of the weighting function is simply the product of the input element and a variable weight value. **Stage three** involves the summation of all the weighted input elements from stage two. This net value becomes the argument to the activation function used in **stage four** to determine the final output of the neuron. Typical activation functions are shown in figure 2.3. It is the non-linearity of the activation functions that give ANNs the ability of decision making \[Zur92\].
 
-![Figure 2.2, Table 2.1 and Figure 2.3](figures/CHAP2/fig2-2_table2-1.png)
-
-*Figure 2.2, Table 2.1 and Figure 2.3 (vector drawings recovered from rendered page; the conversion damaged its layout, see the PDF or the printed original)*
-
 |  |  |  |
 |----|----|----|
 | **Task** | **Conventional Computation** | **Neural Network Computation** |
@@ -41,9 +37,13 @@ The operation of an artificial neuron can be visualized as a four stage process 
 | **Internal data** | Internal representation in control of the algorithm | Internal representation in control of input data |
 | **Fixed or intermediate data storage** | ROM, RAM high-precision binary memories | Interconnecting weights of typically continuous values |
 
-Incoming Axons from other Neurons
+**Table 2.1 Comparison of Conventional and Neural Network Computation \[Zur92\]**
 
-![image1](figures/CHAP2/image1.png)
+![Figure 2.2](figures/CHAP2/image1.png)
+
+![Figure 2.3](figures/CHAP2/fig2-3.png)
+
+*Figure 2.3 scanned from the printed thesis.*
 
 **2.4 Differentiating Between ANNs**
 

@@ -239,7 +239,7 @@ The Fuzzy ART ANN model is shown in figure 3.3. (Note: the orienting subsystem a
 
 ![Figure 3.4](figures/CHAP3/fig3-4.png)
 
-*Figure 3.4 (vector drawing recovered from rendered page; the conversion damaged its layout, see the PDF or the printed original)*
+*Scanned from the printed thesis.*
 
 **3.10 An Eight Stage Fuzzy ART Algorithm**
 
