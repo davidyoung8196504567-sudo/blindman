@@ -234,13 +234,41 @@ over:
 - **A division of work and an *Author and tools* statement.** These say which decisions are the
   author's and what was built with AI assistance.
 
-### A shared environment: an audio-only caller
+### A shared environment: `deafman` and `blindman` modes for `ivrsim`
 
 bug-bash's IVR simulator (`ivrsim`) is entirely fictional, and its design lists speech in and out
-as an optional later release. With spoken prompts it becomes a natural test bed for BLINDMAN: an
-agent that must navigate a phone menu using only what it hears. The integration would use
-`ivrsim` as a dependency, not copy it, and keeps to the decision that IVR client work stays out of
-this repository. It is an option for after Phase 3, to be decided.
+as an optional later release. It would gain two **output modes**. Each delivers the same call
+flow through one sense only:
+
+| Mode | The caller receives | Serves | Agent test |
+|---|---|---|---|
+| **`deafman`** | Text only: prompts as text, never audio | Callers who are deaf or hard of hearing, as text relay and real-time text (RTT) serve them on real phone lines | A language-model caller reading text, which is bug-bash's release 1 as designed |
+| **`blindman`** | Speech only: prompts as audio, never text | Callers who are blind or have low vision; a phone menu is already audio-first | BLINDMAN: it must recognize the prompts by ear before it can choose what to press |
+
+What changes and what doesn't:
+- **The engine is unchanged.** The modes are a presentation layer over `IvrSession.next()`.
+  `deafman` passes the prompt text through. `blindman` renders the prompt to audio with
+  text-to-speech, and later optionally with recorded prompts, and withholds the text.
+- **Input stays the same in both modes:** keypad digits, plus speech in `blindman` mode once
+  speech input exists.
+- **The trace still records everything,** so grading is identical in both modes.
+
+**Why it links the projects:**
+- The same fictional call flows can be run in both modes.
+- The gap between a text caller and an audio caller then measures exactly what hearing adds or
+  costs. For example, a prompt that reads clearly but is misheard when spoken (a homophone, or a
+  number read too fast) is a defect that only `blindman` mode exposes.
+- Both modes test accessibility, the shared motivation of the two projects.
+
+**How the code is divided:**
+- `ivrsim` lives in bug-bash and owns the engine and the two modes.
+- BLINDMAN supplies the *ear*: the recognizer that turns `blindman`-mode audio back into
+  something an agent can act on.
+- BLINDMAN uses `ivrsim` as a dependency and never copies it. That keeps to the decision that IVR
+  client work stays out of this repository.
+
+**Timing:** after Phase 3, when BLINDMAN can recognize speech in general. The text-to-speech used
+for `blindman` mode should be an open model, for the licensing reasons in Phase 1.
 
 ## How this serves BLINDMAN
 
@@ -254,9 +282,9 @@ reverse: hear those dimensions and recover the meaning. Each phase builds part o
 ## Open decisions
 
 - ~~Language for the port~~: **Python** (decided 2026-11-08).
-- **Timing:** bug-bash's schedule runs to late December, so Phase 0 could run alongside it or
-  start afterwards.
-- **The shared `ivrsim` environment:** whether to adopt it after Phase 3.
+- ~~Timing~~: **Stage 2 runs in parallel with bug-bash** (decided 2026-11-08).
+- ~~The shared `ivrsim` environment~~: **adopted**, with `deafman` and `blindman` output modes
+  (decided 2026-11-08). The modes still have to be added to bug-bash's `ivrsim` design.
 - **Synthetic speech:** seek written permission from ElevenLabs, or use an open-weight TTS model
   whose licence allows training.
 - **Data budget:** whether to license TIMIT through the LDC, and whether to run a new
