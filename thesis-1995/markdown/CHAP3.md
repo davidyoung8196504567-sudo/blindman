@@ -237,6 +237,10 @@ The Fuzzy ART network \[Car91\] combines fuzzy logic with ART neural networks by
 
 The Fuzzy ART ANN model is shown in figure 3.3. (Note: the orienting subsystem and reset mechanism have been omitted here for clarity -- they can be seen in the Fuzzy ART Map model depicted in figure 3.4.) It contains three fields labeled F0, F1 and F2. The first field (F0) consists of M input terminals across which the current fuzzy valued input pattern ***I*** is presented. The second field (F1) consists of M artificial neurons with fuzzy activation functions. The third field (F2) consists of N artificial neurons that perform a category choice function. The nodes in F1 and F2 are fully inter-connected and an adaptive weight matrix ***W*** modifies signals transferred between the two fields. W<sub>mn</sub> is subscript notation used in ART network literature referring to the weight connection between the m<sup>th</sup> F1 node and the n<sup>th</sup> node in F2. When the network is first initialized, ***W*** takes on the value of an M by N unity matrix.
 
+![Figure 3.3](figures/CHAP3/fig3-3.png)
+
+*Scanned from the printed thesis.*
+
 ![Figure 3.4](figures/CHAP3/fig3-4.png)
 
 *Scanned from the printed thesis.*
@@ -384,10 +388,6 @@ By equation 3.21, X<sub>AB</sub> = 0 if the category selected by ART<sub>A</sub>
 This supervised training method allows each output node of the ART<sub>A</sub> network to be assigned a label (by the map field) indicating which class or parent category it represents. When the ART<sub>A</sub> network trains on an input vector, it first attempts to recognize it. If it cannot match the input vector to the target output class provided by the ART<sub>B</sub> network, then the ART<sub>A</sub> network memory is updated. The ART<sub>A</sub> network is also updated if it did classify the input vector correctly, but the similarity of the match was below a fixed baseline similarity. This learning method allows the network to discriminate between input vectors which represent new data and those which contain data already learned. As well, the mapping of the output nodes of the ART<sub>A</sub> network into different class groups allows the network to be trained to recognize patterns that are not linearly separable, as demonstrated by the two-spiral test in \[Car92\]. The Fuzzy ART Map network can perform this mapping in one presentation of the training set. These qualities that make this network an attractive candidate for adaptive pattern recognition within a large abstract information database.
 
 Chapter five will describe the implementation of the Fuzzy ART Map architecture in a software ANN program. Since software simulations are not bound by the same physical limits as the systems they simulate, many of the structures shown in figure 3.4 are replaced by functional equivalents to simplify the program design.
-
-**Field 2** (F2)- N Nodes
-
-STM active category vector ***Y***
 
 **3.12 Chapter Summary**
 

@@ -55,7 +55,7 @@ Networks are typically organized into layers of neurons. The number of the layer
 
 ![Figure 2.4](figures/CHAP2/fig2-4.png)
 
-*Figure 2.4 (vector drawing recovered from rendered page)*
+*Scanned from the printed thesis.*
 
 **2.4.2 ANN Learning Process**
 
