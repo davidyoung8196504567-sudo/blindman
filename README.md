@@ -8,6 +8,10 @@ audio counterpart to the GUI (Graphical User Interface) that computing still dep
 heavily. Interfaces designed for hearing rather than sight are essential for people with visual
 impairments. That is where the name comes from.
 
+The AUI concept, including the sound dimensions it uses to carry meaning (frequency, volume,
+waveform, timing, timbre, formant ratios and spatial direction), is described in
+[`docs/AUI.md`](docs/AUI.md).
+
 ## Foundation: the 1995 thesis
 
 The project resurrects and extends research begun in 1993–1995 during post-graduate studies at
