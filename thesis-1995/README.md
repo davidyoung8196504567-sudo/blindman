@@ -1,5 +1,7 @@
 # A Fuzzy ART Map Neural Network Speech Recognition System Based on Formant Ratios
 
+<img src="cover.jpg" alt="The bound thesis: red cloth cover stamped in gold with the title, D. P. Young, the RMC crest, Department of Electrical and Computer Engineering, Royal Military College of Canada, Kingston, Ontario" width="320" align="right">
+
 **Captain D.P. Young, CD, B.Sc., rrmc — Canadian Forces**
 M.Eng. thesis, Department of Electrical and Computer Engineering,
 Royal Military College of Canada, Kingston, Ontario — **May 1995**
@@ -18,7 +20,7 @@ readable today.
 
 | Format | Where | Notes |
 |---|---|---|
-| **PDF (whole thesis)** | [`Young-1995-FuzzyARTMAP-ASR-Thesis.pdf`](Young-1995-FuzzyARTMAP-ASR-Thesis.pdf) | 178 pages, bookmarked by chapter. Best for reading. |
+| **PDF (whole thesis)** | [`Young-1995-FuzzyARTMAP-ASR-Thesis.pdf`](Young-1995-FuzzyARTMAP-ASR-Thesis.pdf) | 179 pages including the cover, bookmarked by chapter. Best for reading. |
 | PDF per chapter | [`pdf/`](pdf/) | |
 | Markdown (readable on GitHub) | [`markdown/`](markdown/) | Text, tables, equations and figures; annex code listings as code blocks. |
 | Word (.docx) | [`docx/`](docx/) | Editable modern Word format. |

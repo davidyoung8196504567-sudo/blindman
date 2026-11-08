@@ -58,11 +58,15 @@ paragraph "The network learns the mapping…" now sits above the figure, where t
 it; in the printed copy it follows the figure on p. 85. The `docx/` files are the unedited
 conversion and still contain these defects.
 
-The other figures were checked visually against the converted text, not against the printed copy.
-Fig 2.4 passed that check but differed from the print, so the remaining drawing-layer diagrams
-(Figs 3.1, 3.2 and 4.2) may also differ in detail. The embedded pictures (screen captures,
-spectrograms, waveforms, formant plots and Fig 2.2) come from the documents' own image data rather
-than the drawing layer, and are much less likely to be affected.
+The author compared all the remaining figures with the printed copy in November 2026 and found
+them correct.
+
+### Cover
+
+The printed thesis is bound in red cloth with the title, author, department and college stamped in
+gold, under the crest of the Royal Military College of Canada. A colour flatbed scan (600 dpi) is
+included as [`cover.jpg`](cover.jpg), cropped to the binding and reduced to 1600 pixels wide, and
+forms the first page of the combined PDF.
 
 ## Pagination
 
@@ -76,7 +80,7 @@ Chapters 3, 4 and 5 were therefore re-rendered with a page break before each of 
 headings. In chapter 4 the blank lines between the four bullets of §4.3 were made shorter so the
 section fits on its page, as it does in print. The Fig 3.2 drawing, which Word anchored to the
 §3.4 heading, was re-anchored so it stays on its page. All 83 headings in the PDF now fall on
-their printed page, and the combined PDF has 178 pages.
+their printed page. With the cover added, the combined PDF has 179 pages.
 
 The re-rendering went through LibreOffice's OpenDocument format, so a few lines in chapters 3–5
 wrap one word differently from the first conversion. Neither version is line-for-line identical

@@ -14,6 +14,8 @@ waveform, timing, timbre, formant ratios and spatial direction), is described in
 
 ## Foundation: the 1995 thesis
 
+<img src="thesis-1995/cover.jpg" alt="Cover of the bound 1995 thesis" width="200" align="right">
+
 The project resurrects and extends research begun in 1993–1995 during post-graduate studies at
 the Royal Military College of Canada and Queen's University:
 
