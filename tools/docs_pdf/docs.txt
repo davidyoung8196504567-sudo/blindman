@@ -3,5 +3,6 @@
 docs/STAGE2.md
 docs/PHASE0.md
 docs/COMPONENTS.md
+docs/PORT_DESIGN.md
 docs/STATE_OF_THE_ART.md
 docs/AUI.md

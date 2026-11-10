@@ -52,6 +52,8 @@ recovered thesis, the original MATLAB code and the speech feature database are a
   - **How it works:** functional component diagrams, with the I/O marked, from the
     speaker's voice to a recognized phrase:
     [`docs/COMPONENTS.md`](docs/COMPONENTS.md).
+    The port's software design, its modules and classes and how they relate:
+    [`docs/PORT_DESIGN.md`](docs/PORT_DESIGN.md).
   - **Where the world is now:** a survey of 2026 speech recognition models, free speech
     databases and open problems, to rebaseline before building:
     [`docs/STATE_OF_THE_ART.md`](docs/STATE_OF_THE_ART.md).

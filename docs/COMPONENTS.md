@@ -6,6 +6,8 @@ passes along it. They cover the 1995 system as the thesis describes it
 (Chapter 5, Annexes C–G) and the Python port in
 [`src/blindman/repro1995/`](../src/blindman/repro1995/) that reproduces
 Chapter 6 ([PHASE0.md](PHASE0.md)).
+The port's software design, its modules and classes and how they relate, is
+in [PORT_DESIGN.md](PORT_DESIGN.md).
 
 **Legend:**
 
