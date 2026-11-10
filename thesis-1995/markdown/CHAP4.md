@@ -156,6 +156,41 @@ To dramatically illustrate the effectiveness of formant ratios as a speech ident
 
 To better visualize the relationships in the vowel data presented in table 4.2, figures 4.3 and 4.4 contrast the difference between the formant frequency representation and the formant ratio representation of vowels. Figure 4.5 illustrates the **NPA** (Normalized Polar Angle) formant ratio of the vowels from table 4.2. Although not formally introduced until chapter five, the NPA representation is presented here for the reader’s convenience to show how the distinction between different vowels can be improved, and the differences due to speaker age and gender for a given vowel can be reduced.
 
+| Vowel / ID No | Speaker | F<sub>3</sub> | F<sub>2</sub> | F<sub>1</sub> | F<sub>3</sub>/F<sub>2</sub> | F<sub>2</sub>/F<sub>1</sub> | F<sub>3</sub>/F<sub>1</sub> |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **IY (beet) 1** | Man | 3010 | 2290 | 270 | 1.31 | 8.48 | 11.15 |
+| **2** | Woman | 3310 | 2790 | 310 | 1.19 | 9.00 | 10.68 |
+| **3** | Child | 3730 | 3200 | 370 | 1.17 | 8.65 | 10.08 |
+| **4** | \[Lad75\] | 2890 | 2250 | 280 | 1.28 | 8.04 | 10.32 |
+| **IH (bit) 5** | Man | 2550 | 1990 | 390 | 1.13 | 5.10 | 5.77 |
+| **6** | Woman | 3070 | 2480 | 430 | 1.24 | 5.77 | 7.14 |
+| **7** | Child | 3600 | 2730 | 530 | 1.32 | 5.15 | 6.79 |
+| **8** | \[Lad75\] | 2560 | 1920 | 400 | 1.33 | 4.80 | 6.40 |
+| **EH (bet) 9** | Man | 2480 | 1840 | 530 | 1.35 | 3.47 | 4.68 |
+| **10** | Woman | 2990 | 2330 | 610 | 1.28 | 3.82 | 4.90 |
+| **11** | Child | 3570 | 2610 | 690 | 1.37 | 3.78 | 5.17 |
+| **12** | \[Lad75\] | 2490 | 1770 | 550 | 1.41 | 3.22 | 4.53 |
+| **AE (bat) 13** | Man | 2410 | 1720 | 660 | 1.40 | 2.61 | 3.65 |
+| **14** | Woman | 2850 | 2050 | 860 | 1.39 | 2.38 | 3.31 |
+| **15** | Child | 3320 | 2320 | 1010 | 1.43 | 2.30 | 3.29 |
+| **16** | \[Lad75\] | 2490 | 1660 | 690 | 1.50 | 2.41 | 3.61 |
+| **AA (hot) 17** | Man | 2440 | 1090 | 730 | 2.24 | 1.49 | 3.34 |
+| **18** | Woman | 2810 | 1220 | 850 | 2.30 | 1.44 | 3.31 |
+| **19** | Child | 3170 | 1370 | 1030 | 2.31 | 1.33 | 3.08 |
+| **20** | \[Lad75\] | 2540 | 1100 | 710 | 2.31 | 1.55 | 3.58 |
+| **AO (caught) 21** | Man | 2410 | 840 | 570 | 2.87 | 1.47 | 4.23 |
+| **22** | Woman | 2710 | 920 | 590 | 2.95 | 1.56 | 4.59 |
+| **23** | Child | 3180 | 1060 | 680 | 3.00 | 1.56 | 4.68 |
+| **24** | \[Lad75\] | 2540 | 880 | 590 | 2.89 | 1.49 | 4.31 |
+| **UH (full) 25** | Man | 2240 | 1020 | 440 | 2.20 | 2.32 | 5.09 |
+| **26** | Woman | 2680 | 1160 | 470 | 2.31 | 2.47 | 5.70 |
+| **27** | Child | 3310 | 1410 | 560 | 2.35 | 2.52 | 5.91 |
+| **28** | \[Lad75\] | 2380 | 1030 | 450 | 2.31 | 2.29 | 5.29 |
+| **UW (good) 29** | Man | 2240 | 870 | 300 | 2.57 | 2.90 | 7.47 |
+| **30** | Woman | 2670 | 950 | 370 | 2.81 | 2.57 | 7.22 |
+| **31** | Child | 3260 | 1170 | 430 | 2.79 | 2.72 | 7.58 |
+| **32** | \[Lad75\] | 2250 | 870 | 310 | 2.59 | 2.81 | 7.26 |
+
 **Table 4.2 A Comparison of Vowels by Formant Frequencies and Formant Ratios**
 
 ![image8](figures/CHAP4/image8.png)

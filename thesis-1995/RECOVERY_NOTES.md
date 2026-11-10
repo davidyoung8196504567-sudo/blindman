@@ -61,6 +61,18 @@ conversion and still contain these defects.
 The author compared all the remaining figures with the printed copy in November 2026 and found
 them correct.
 
+### Table 4.2
+
+Table 4.2 (p. 53) sits in a Word 6 frame. LibreOffice let the caption flow around the frame, so
+"Table" printed to the left of the table, "4.2" to its right and the rest underneath. In the row
+for vowel AO, the label "AO (caught)21" was a fraction of a point too wide for its cell and lost
+its second line. pandoc dropped the frame, so the Markdown had the caption but no table.
+
+Chapter 4 was re-rendered with text wrap turned off for that frame and 1 mm less padding in that
+one cell. The caption is now a single line under the table, as for Table 4.1. Only p. 53 changed;
+the other 17 pages of the chapter are pixel-for-pixel the same as before. The table was added to
+the Markdown from the same source. The fix was not checked against the printed copy.
+
 ### Cover
 
 The printed thesis is bound in red cloth with the title, author, department and college stamped in
