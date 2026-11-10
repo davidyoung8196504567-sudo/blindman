@@ -5,6 +5,7 @@
 formant files. **Every Fuzzy ARTMAP recognition rate reproduces exactly** where the data
 survived complete, and four of those six tables match cell for cell. Every difference is
 written up below; one is still unexplained. No parameter was tuned.
+The components and their inputs and outputs are drawn in [COMPONENTS.md](COMPONENTS.md).
 
 Run it:
 
