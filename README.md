@@ -55,6 +55,9 @@ recovered thesis, the original MATLAB code and the speech feature database are a
   - **Where the world is now:** a survey of 2026 speech recognition models, free speech
     databases and open problems, to rebaseline before building:
     [`docs/STATE_OF_THE_ART.md`](docs/STATE_OF_THE_ART.md).
+  - **PDF copies** of the plans and design documents are in [`docs/pdf/`](docs/pdf/),
+    rebuilt automatically whenever one of them changes. The Markdown is the source; the
+    PDFs are for easy reading and printing.
 
 ## License
 

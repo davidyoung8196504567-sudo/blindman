@@ -1,0 +1,7 @@
+# Plan and design documents rendered to docs/pdf/ on every push to main.
+# One Markdown path per line, relative to the repository root.
+docs/STAGE2.md
+docs/PHASE0.md
+docs/COMPONENTS.md
+docs/STATE_OF_THE_ART.md
+docs/AUI.md
